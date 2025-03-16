@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nike Shoe Product</title>
+    <link rel="stylesheet" href="static/index.css">
 </head>
 <body>
-    <img src="static/img/nike-shoe.jpg" alt="Nike shoe">
-    <p>Nike shoes</p>
-    <button>Purchase - $149</button>
-    <p id="error-message"></p>
+    <div class="product-container">
+        <img src="static/img/nike-shoe.jpg" alt="Nike shoe" width="200" height="200" class="product-image">
+        <h2 class="product-title">Nike shoes</h2>
+        <button class="purchase-button" onclick="purchase()">Purchase - $149</button>
+        <p id="error-message" class="error"></p>
+    </div>
     <script src="static/index.js"></script>
 </body>
 </html>
