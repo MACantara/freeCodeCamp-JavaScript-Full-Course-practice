@@ -28,3 +28,12 @@ function startGame() {
     console.log("isAlive: " + isAlive);
 }
 
+function newCard() {
+    let newCard = 7;
+
+    sum += newCard;
+    startGame();
+
+    console.log("New card drawn: " + newCard);
+    console.log("New sum: " + sum);
+}
