@@ -7,3 +7,8 @@ let certifications = [
     "ITS Databases",
     "IC3 GS6 Level 1"
 ]
+
+console.log("Featured Posts: " + featuredPosts);
+console.log(certifications[1]);
+console.log(certifications[2]);
+console.log(certifications[0]);
