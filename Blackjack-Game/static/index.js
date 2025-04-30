@@ -38,6 +38,7 @@ function newCard() {
     let newCard = 7;
 
     sum += newCard;
+    cards.push(newCard);
     renderGame();
 
     console.log("New card drawn: " + newCard);
