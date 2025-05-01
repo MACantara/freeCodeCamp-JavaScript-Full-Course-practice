@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 
 let sum = firstCard + secondCard;
@@ -10,6 +10,10 @@ let message = "";
 let playRoundMessage = document.getElementById("play-round-message");
 let sumCounter = document.getElementById("sum-counter");
 let cardCollection = document.getElementById("card-collection");
+
+function getRandomCard() {
+    return 5;
+}
 
 function startGame() {
     renderGame();
@@ -41,7 +45,7 @@ function renderGame() {
 }
 
 function newCard() {
-    let newCard = 7;
+    let newCard = getRandomCard();
 
     sum += newCard;
     cards.push(newCard);
