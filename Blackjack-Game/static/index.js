@@ -27,7 +27,13 @@ function renderGame() {
     }
 
     playRoundMessage.textContent = message;
-    cardCollection.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardCollection.textContent = "Cards: ";
+
+    for (let i = 0; i < cards.length; i++)
+    {
+        cardCollection.textContent += cards[i] + " ";
+    }
+
     sumCounter.textContent = "Sum: " + sum;
 
     console.log("hasBlackJack: " + hasBlackJack); 
