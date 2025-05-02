@@ -12,7 +12,7 @@ let sumCounter = document.getElementById("sum-counter");
 let cardCollection = document.getElementById("card-collection");
 
 function getRandomCard() {
-    return 5;
+    return Math.floor(Math.random() * 13) + 1;
 }
 
 function startGame() {
