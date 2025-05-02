@@ -1,5 +1,7 @@
-// let randomNumber = Math.random() * 6;
+function rollDice() {
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
 
-let floodredNumber = Math.floor(Math.random() * 6);
+    return randomNumber;
+}
 
-console.log(floodredNumber);
+console.log(rollDice());
