@@ -1,4 +1,7 @@
-let saveBtn = document.getElementById("save-btn");
+let savedURLs = [];
+
+const urlInput = document.getElementById("url-input");
+const saveBtn = document.getElementById("save-btn");
 
 saveBtn.addEventListener("click", saveURL);
 
