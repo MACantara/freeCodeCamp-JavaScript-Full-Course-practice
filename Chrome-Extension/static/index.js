@@ -1,5 +1,7 @@
 let saveBtn = document.getElementById("save-btn");
 
-saveBtn.addEventListener("click", function() {
-    console.log("Save button clicked from addEventListener!");
-});
+saveBtn.addEventListener("click", saveURL);
+
+function saveURL() {
+    console.log("URL saved!");
+}
