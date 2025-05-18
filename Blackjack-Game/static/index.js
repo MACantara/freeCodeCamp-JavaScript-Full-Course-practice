@@ -1,3 +1,8 @@
+let player = {
+    name: "Mik",
+    chips: 145
+}
+
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -7,11 +12,6 @@ let message = "";
 let playRoundMessage = document.getElementById("play-round-message");
 let sumCounter = document.getElementById("sum-counter");
 let cardCollection = document.getElementById("card-collection");
-
-let player = {
-    name: "Mik",
-    chips: 145
-}
 
 let playerScore = document.getElementById("player-score");
 playerScore.textContent = player.name + ": $" + player.chips;
