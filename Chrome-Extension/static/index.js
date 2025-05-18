@@ -6,7 +6,7 @@ const saveBtn = document.getElementById("save-btn");
 saveBtn.addEventListener("click", saveURL);
 
 function saveURL() {
-    savedURLs.push("www.google.com");
+    savedURLs.push(urlInput.value);
     console.log("URL saved!");
     console.log(savedURLs);
 }
