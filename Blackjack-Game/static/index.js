@@ -8,6 +8,14 @@ let playRoundMessage = document.getElementById("play-round-message");
 let sumCounter = document.getElementById("sum-counter");
 let cardCollection = document.getElementById("card-collection");
 
+let player = {
+    name: "Mik",
+    chips: 145
+}
+
+let playerScore = document.getElementById("player-score");
+playerScore.textContent = player.name + ": $" + player.chips;
+
 function getRandomCard() {
     let randomCard = Math.floor(Math.random() * 13) + 1;
 
