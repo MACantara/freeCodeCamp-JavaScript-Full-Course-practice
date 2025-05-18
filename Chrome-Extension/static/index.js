@@ -2,6 +2,7 @@ let savedURLs = ["www.google.com", "www.facebook.com", "www.youtube.com"];
 
 const urlInput = document.getElementById("url-input");
 const saveBtn = document.getElementById("save-btn");
+const savedURLsList = document.getElementById("saved-urls-list");
 
 saveBtn.addEventListener("click", saveURL);
 

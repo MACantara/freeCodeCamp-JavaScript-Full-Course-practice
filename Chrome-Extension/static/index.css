@@ -23,3 +23,7 @@ button {
     border: none;
     font-weight: bold;
 }
+
+.saved-urls-title {
+    margin: 10px 0;
+}
