@@ -71,5 +71,15 @@ const tabs = [
 ]
 
 function saveCurrentTabURL() {
-    console.log(tabs[0].url);
+    savedURLs.push(tabs[0].url);
+    console.log("Current tab URL saved!");
+
+    // Save the updated list of saved URLs to localStorage
+    localStorage.setItem("savedURLs", JSON.stringify(savedURLs));
+
+    // Render the updated list of saved URLs
+    render(savedURLs);
+
+    // Verify that the URL was saved into localStorage
+    console.log(`Saved URLs: ${localStorage.getItem("savedURLs")}`);
 }
