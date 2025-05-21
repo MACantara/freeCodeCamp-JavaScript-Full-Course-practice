@@ -17,8 +17,14 @@ function saveURL() {
     // Clear the input field after saving the URL
     urlInput.value = "";
 
+    // Save the updated list of saved URLs to localStorage
+    localStorage.setItem("savedURLs", JSON.stringify(savedURLs));
+
     // Render the updated list of saved URLs
     renderSavedURLs();
+
+    // Verify that the URL was saved
+    console.log(localStorage.getItem("savedURLs"));
 }
 
 function renderSavedURLs() {
