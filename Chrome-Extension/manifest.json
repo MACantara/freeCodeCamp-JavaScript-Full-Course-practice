@@ -4,6 +4,6 @@
     "name": "URL Saver",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "static/icon.svg"
+        "default_icon": "static/icon.png"
     }
 }
