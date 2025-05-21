@@ -8,13 +8,13 @@ const savedURLsList = document.getElementById("saved-urls-list");
 // Get the saved URLs from localStorage
 let savedURLsFromLocalStorage = JSON.parse(localStorage.getItem("savedURLs"));
 
-// Verify that the saved URLs were retrieved from localStorage
-console.log(savedURLsFromLocalStorage);
+if (savedURLsFromLocalStorage) {
+    savedURLs = savedURLsFromLocalStorage;
+
+    renderSavedURLs();
+}
 
 saveBtn.addEventListener("click", saveURL);
-
-// Render the saved URLs when the page loads
-renderSavedURLs();
 
 function saveURL() {
     savedURLs.push(urlInput.value);
