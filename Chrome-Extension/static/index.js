@@ -6,14 +6,22 @@ const savedURLsList = document.getElementById("saved-urls-list");
 
 saveBtn.addEventListener("click", saveURL);
 
+renderSavedURLs();
+
 function saveURL() {
     savedURLs.push(urlInput.value);
     console.log("URL saved!");
     console.log(savedURLs);
+
+    renderSavedURLs();
 }
 
-let listItems = "";
-for (let i = 0; i < savedURLs.length; i++) {
-    listItems += "<li>" + savedURLs[i] + "</li>";
+function renderSavedURLs() {
+    let listItems = "";
+
+    for (let i = 0; i < savedURLs.length; i++) {
+        listItems += "<li>" + savedURLs[i] + "</li>";
+    }
+
+    savedURLsList.innerHTML = listItems;
 }
-savedURLsList.innerHTML = listItems;
