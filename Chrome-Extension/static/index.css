@@ -27,3 +27,7 @@ button {
 .saved-urls-title {
     margin: 10px 0;
 }
+
+li {
+    margin-left: 16px;
+}

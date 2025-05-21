@@ -13,5 +13,7 @@ function saveURL() {
 }
 
 for (let i = 0; i < savedURLs.length; i++) {
-    savedURLsList.innerHTML += "<li>" + savedURLs[i] + "</li>";
+    const li = document.createElement("li");
+    li.textContent = savedURLs[i];
+    savedURLsList.append(li);
 }
