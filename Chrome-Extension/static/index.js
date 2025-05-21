@@ -1,11 +1,14 @@
 let savedURLs = [];
 
+// Get the DOM elements
 const urlInput = document.getElementById("url-input");
 const saveBtn = document.getElementById("save-btn");
 const savedURLsList = document.getElementById("saved-urls-list");
 
+// Get the saved URLs from localStorage
 let savedURLsFromLocalStorage = JSON.parse(localStorage.getItem("savedURLs"));
 
+// Verify that the saved URLs were retrieved from localStorage
 console.log(savedURLsFromLocalStorage);
 
 saveBtn.addEventListener("click", saveURL);
@@ -33,9 +36,12 @@ function saveURL() {
 function renderSavedURLs() {
     let listItems = "";
 
+    // Loop through the saved URLs and create a list item for each one
     for (let i = 0; i < savedURLs.length; i++) {
+        // Add https:// to the URL if it doesn't start with http or https
         const url = savedURLs[i].startsWith("http") ? savedURLs[i] : "https://" + savedURLs[i];
         
+        // Add the URL to the list of list items
         listItems += `
             <li>
                 <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>
@@ -43,5 +49,6 @@ function renderSavedURLs() {
         `;
     }
 
+    // Update the saved URLs list in the DOM
     savedURLsList.innerHTML = listItems;
 }
