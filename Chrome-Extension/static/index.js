@@ -1,4 +1,4 @@
-let savedURLs = ["www.google.com", "www.facebook.com", "www.youtube.com"];
+let savedURLs = [];
 
 const urlInput = document.getElementById("url-input");
 const saveBtn = document.getElementById("save-btn");
