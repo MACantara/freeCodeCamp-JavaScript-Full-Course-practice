@@ -3,6 +3,7 @@ let savedURLs = [];
 // Get the DOM elements
 const urlInput = document.getElementById("url-input");
 const saveBtn = document.getElementById("save-btn");
+const deleteBtn = document.getElementById("delete-btn");
 const savedURLsList = document.getElementById("saved-urls-list");
 
 // Get the saved URLs from localStorage
