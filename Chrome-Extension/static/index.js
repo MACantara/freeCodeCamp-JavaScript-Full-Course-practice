@@ -3,6 +3,7 @@ let savedURLs = [];
 // Get the DOM elements
 const urlInput = document.getElementById("url-input");
 const saveBtn = document.getElementById("save-btn");
+const saveTabBtn = document.getElementById("save-tab-btn");
 const deleteBtn = document.getElementById("delete-btn");
 const savedURLsList = document.getElementById("saved-urls-list");
 
@@ -37,6 +38,7 @@ function render(urls) {
 
 saveBtn.addEventListener("click", saveURL);
 deleteBtn.addEventListener("dblclick", deleteAllURLs);
+saveTabBtn.addEventListener("click", saveCurrentTabURL);
 
 function saveURL() {
     savedURLs.push(urlInput.value);
@@ -60,4 +62,14 @@ function deleteAllURLs() {
     localStorage.clear();
     savedURLs = [];
     render(savedURLs);
+}
+
+const tabs = [
+    {
+        url: "https://www.google.com"
+    }
+]
+
+function saveCurrentTabURL() {
+    console.log(tabs[0].url);
 }
