@@ -12,8 +12,8 @@ function saveURL() {
     console.log(savedURLs);
 }
 
+let listItems = "";
 for (let i = 0; i < savedURLs.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = savedURLs[i];
-    savedURLsList.append(li);
+    listItems += "<li>" + savedURLs[i] + "</li>";
 }
+savedURLsList.innerHTML = listItems;
