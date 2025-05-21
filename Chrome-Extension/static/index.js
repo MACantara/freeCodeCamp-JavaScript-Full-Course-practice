@@ -64,22 +64,20 @@ function deleteAllURLs() {
     render(savedURLs);
 }
 
-const tabs = [
-    {
-        url: "https://www.google.com"
-    }
-]
-
 function saveCurrentTabURL() {
-    savedURLs.push(tabs[0].url);
-    console.log("Current tab URL saved!");
+    // Get the current tab URL
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        savedURLs.push(tabs[0].url);
 
-    // Save the updated list of saved URLs to localStorage
-    localStorage.setItem("savedURLs", JSON.stringify(savedURLs));
+        console.log("Current tab URL saved!");
 
-    // Render the updated list of saved URLs
-    render(savedURLs);
-
-    // Verify that the URL was saved into localStorage
-    console.log(`Saved URLs: ${localStorage.getItem("savedURLs")}`);
+        // Save the updated list of saved URLs to localStorage
+        localStorage.setItem("savedURLs", JSON.stringify(savedURLs));
+    
+        // Render the updated list of saved URLs
+        render(savedURLs);
+    
+        // Verify that the URL was saved into localStorage
+        console.log(`Saved URLs: ${localStorage.getItem("savedURLs")}`);
+    });
 }
