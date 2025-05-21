@@ -7,7 +7,7 @@ const deleteBtn = document.getElementById("delete-btn");
 const savedURLsList = document.getElementById("saved-urls-list");
 
 // Get the saved URLs from localStorage
-let savedURLsFromLocalStorage = JSON.parse(localStorage.getItem("savedURLs"));
+const savedURLsFromLocalStorage = JSON.parse(localStorage.getItem("savedURLs"));
 
 if (savedURLsFromLocalStorage) {
     savedURLs = savedURLsFromLocalStorage;
@@ -16,6 +16,7 @@ if (savedURLsFromLocalStorage) {
 }
 
 saveBtn.addEventListener("click", saveURL);
+deleteBtn.addEventListener("dblclick", deleteAllURLs);
 
 function saveURL() {
     savedURLs.push(urlInput.value);
@@ -32,6 +33,13 @@ function saveURL() {
 
     // Verify that the URL was saved into localStorage
     console.log(`Saved URLs: ${localStorage.getItem("savedURLs")}`);
+}
+
+function deleteAllURLs() {
+    console.log("All URLs deleted!");
+    localStorage.clear();
+    savedURLs = [];
+    renderSavedURLs();
 }
 
 function renderSavedURLs() {
