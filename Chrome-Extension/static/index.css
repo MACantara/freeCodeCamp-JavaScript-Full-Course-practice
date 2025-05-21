@@ -28,6 +28,15 @@ button {
     margin: 10px 0;
 }
 
+ul {
+    list-style: none;
+    margin-top: 8px;
+}
+
 li {
-    margin-left: 16px;
+    margin: 4px 0;
+}
+
+li a {
+    color: #5f9341;
 }
