@@ -27,7 +27,10 @@ function renderSavedURLs() {
     for (let i = 0; i < savedURLs.length; i++) {
         const url = savedURLs[i].startsWith("http") ? savedURLs[i] : "https://" + savedURLs[i];
         
-        listItems += "<li><a href='" + url + "' target='_blank' rel='noopener noreferrer'>" + url + "</a></li>";
+        listItems += `
+            <li>
+                <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>
+            </li>`;
     }
 
     savedURLsList.innerHTML = listItems;
